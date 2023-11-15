@@ -73,3 +73,4 @@ C:\Users\belto\OneDrive\Documents\Visual Studio 2022\Bulkybook\obj\Debug\net7.0\
 C:\Users\belto\OneDrive\Documents\Visual Studio 2022\Bulkybook\obj\Debug\net7.0\Bulkybook.pdb
 C:\Users\belto\OneDrive\Documents\Visual Studio 2022\Bulkybook\obj\Debug\net7.0\Bulkybook.genruntimeconfig.cache
 C:\Users\belto\OneDrive\Documents\Visual Studio 2022\Bulkybook\obj\Debug\net7.0\ref\Bulkybook.dll
+C:\Users\belto\OneDrive\Documents\Visual Studio 2022\Bulkybook\bin\Debug\net7.0\libman.json
