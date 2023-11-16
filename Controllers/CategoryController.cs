@@ -47,6 +47,7 @@ public class CategoryController : Controller
         {
             _dbContext.Categories.Add(userCategory);
             _dbContext.SaveChanges();
+            TempData["success"] = "Category Created Successfully";
             return RedirectToAction("Index", "Category");
         }
         else
@@ -94,6 +95,7 @@ public class CategoryController : Controller
         {
             _dbContext.Categories.Update(userCategory);
             _dbContext.SaveChanges();
+            TempData["success"] = "Category Modified Successfully";
             return RedirectToAction("Index", "Category");
         }
         else
@@ -128,6 +130,7 @@ public class CategoryController : Controller
         }
         _dbContext.Categories.Remove(userCategory);
         _dbContext.SaveChanges();
+        TempData["success"] = "Category Deleted Successfully";
         return RedirectToAction("Index", "Category");
     }
 }
