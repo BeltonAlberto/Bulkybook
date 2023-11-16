@@ -10,11 +10,17 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Bulkybook
 build_property.RootNamespace = Bulkybook
 build_property.ProjectDir = C:\Users\belto\OneDrive\Documents\Visual Studio 2022\Bulkybook\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\belto\OneDrive\Documents\Visual Studio 2022\Bulkybook
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/belto/OneDrive/Documents/Visual Studio 2022/Bulkybook/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/belto/OneDrive/Documents/Visual Studio 2022/Bulkybook/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s

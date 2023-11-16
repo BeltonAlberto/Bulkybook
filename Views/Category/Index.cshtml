@@ -2,23 +2,39 @@
 @{
     ViewData["Title"] = "Categories";
 }
-
-<h1>Categories</h1>
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Category List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Category" asp-action="Create" class="btn btn-primary "><i
+                    class="bi bi-plus-circle"></i>&nbsp;Add new Category</a>
+        </div>
+    </div>
+</div>
 <table class="table table-bordered table-striped table-hover" style="width: 100%;">
     <thead>
         <tr>
             <th scope="col">Name</th>
-            <th scope="col" class="text-center">Display Order</th>
-            <th scope="col" class="text-center">Actions</th>
+            <th scope="col" class="">Display Order</th>
+            <th scope="col" class="">Actions</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
-                <th scope="row">@item.Name</th>
-                <td scope="row">@item.DisplayOrder</td>
-                <td scope="row"><a href="">Edit</a> &nbsp; <a href="">Delete</a></td>
+                <th scope="row" width="40%">@item.Name</th>
+                <td scope="row" width="40%">@item.DisplayOrder</td>
+                <td scope="row" width="20%">
+
+                    <a class="btn btn-warning" asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id">
+                        <i class="bi bi-pencil-square"></i>&nbsp;Edit
+                    </a>
+                    <a class="btn btn-danger" asp-controller="Category" asp-action="Delete" asp-route-id="@item.Id"><i
+                            class="bi bi-trash">&nbsp;</i>Delete</a>
+                </td>
             </tr>
         }
     </tbody>
