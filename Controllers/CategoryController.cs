@@ -64,12 +64,12 @@ public class CategoryController : Controller
         {
             return NotFound();
         }
-        Category? userCategory = _dbContext.Categories.Find(id);
-        if (userCategory is null)
+        Category? userCategoryFromDb = _dbContext.Categories.Find(id);
+        if (userCategoryFromDb is null)
         {
             return NotFound();
         }
-        return View(userCategory);
+        return View(userCategoryFromDb);
     }
 
     [HttpPost]
@@ -102,11 +102,33 @@ public class CategoryController : Controller
         }
 
     }
-
+    // destroy an existing Category
     [HttpGet]
-    public IActionResult Delete()
+    public IActionResult Delete(int? id)
     {
-        return View();
+        if (id is null || id is 0)
+        {
+            return NotFound();
+        }
+        Category? userCategoryFromDb = _dbContext.Categories.Find(id);
+        if (userCategoryFromDb is null)
+        {
+            return NotFound();
+        }
+        return View(userCategoryFromDb);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Delete(Category userCategory)
+    {
+        if (userCategory is null)
+        {
+            return NotFound();
+        }
+        _dbContext.Categories.Remove(userCategory);
+        _dbContext.SaveChanges();
+        return RedirectToAction("Index", "Category");
     }
 }
 

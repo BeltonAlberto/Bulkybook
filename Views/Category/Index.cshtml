@@ -27,13 +27,14 @@
             <tr>
                 <th scope="row" width="40%">@item.Name</th>
                 <td scope="row" width="40%">@item.DisplayOrder</td>
-                <td scope="row" width="20%">
-
-                    <a class="btn btn-warning" asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id">
-                        <i class="bi bi-pencil-square"></i>&nbsp;Edit
-                    </a>
-                    <a class="btn btn-danger" asp-controller="Category" asp-action="Delete" asp-route-id="@item.Id"><i
-                            class="bi bi-trash">&nbsp;</i>Delete</a>
+                <td scope="row">
+                    <div class="w-75 btn-group" role="group">
+                        <a class="btn btn-warning" asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id">
+                            <i class="bi bi-pencil-square"></i>&nbsp;Edit
+                        </a>
+                        <a class="btn btn-danger" asp-controller="Category" asp-action="Delete" asp-route-id="@item.Id"><i
+                                class="bi bi-trash">&nbsp;</i>Delete</a>
+                    </div>
                 </td>
             </tr>
         }
