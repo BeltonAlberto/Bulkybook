@@ -34,18 +34,18 @@ public class CategoryController : Controller
             return BadRequest(); //
         }
 
-        //if (string.IsNullOrWhiteSpace(userCategory.Name))
-        //{
-        //    ModelState.AddModelError("Name", "Name cannot be empty");
-        //}
+        if (string.IsNullOrWhiteSpace(userCategory.Name))
+        {
+            ModelState.AddModelError("Name", "Name cannot be empty");
+        }
 
+        if (int.TryParse(userCategory.Name.Replace(' ', '0').Trim(), out _))
+        {
+            ModelState.AddModelError("Name", "Name cannot be a number");
+        }
 
         if (ModelState.IsValid)
         {
-            if (int.TryParse(userCategory.Name.Replace(' ', '0').Trim(), out _))
-            {
-                ModelState.AddModelError("Name", "Name cannot be a number");
-            }
             _dbContext.Categories.Add(userCategory);
             _dbContext.SaveChanges();
             return RedirectToAction("Index", "Category");
